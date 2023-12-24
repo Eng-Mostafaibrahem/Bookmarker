@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="./css/all.min.css" /> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="">
+    <div class="container">
+      <h1 class="text-center display-5 mb-5 mt-5 mx-auto">Bookmarker</h1>
+
+      <div>
+        <hr class="dashed" />
+      </div>
+
+      <div>
+        <h3 class="fs-4 text-center mt-4 mb-5">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+      </div>
+
+      <div class="parent">
+        <h6><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</h6>
+        <input
+          type="text"
+          class="mb-4 form-control focus-ring rounded-2 focus-ring-warning"
+          id="siteName"
+          placeholder="Bookmark Name"
+        />
+        <h6><i class="fa-solid fa-link pe-2"></i> Site URL</h6>
+        <input
+          type="text"
+          class="form-control focus-ring focus-ring-warning rounded-2"
+          id="siteUrl"
+          placeholder="Website URL"
+        />
+      </div>
+
+      <button
+        onclick="addSite()"
+        class="btn btn-warning rounded-5 px-5 my-4 d-block mx-auto"
+      >
+        Submit
+      </button>
+      <div>
+        <hr class="dashed" />
+      </div>
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <table class="table text-center mt-4">
+        <thead>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+
+      <div
+        class="lightBoxContainer bg-black bg-opacity-50 position-absolute start-0 top-0 bottom-0 end-0 d-none"
+      >
+        <div
+          class="lightBox bg-light position-absolute start-50 top-50 translate-middle"
+        >
+          <div class="header d-flex justify-content-between m-3">
+            <div class="icons">
+              <i class="fa-solid fa-circle text-danger"></i>
+              <i class="fa-solid fa-circle text-warning"></i>
+              <i class="fa-solid fa-circle text-success"></i>
+            </div>
+            <div class="close">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+          </div>
+          <div class="validrules m-5">
+            <h4 clas>
+              Site Name or Url is not valid, Please follow the rules below :
+            </h4>
+            <ol class="list-unstyled">
+              <li>
+                <i calss class="fa-regular fa-circle-right p-2 text-danger">
+                </i>
+                <h5 class="d-inline">
+                  Site name first character must be capital letter, at least 3
+                  characters
+                </h5>
+              </li>
+              <li>
+                <i calss class="fa-regular fa-circle-right p-2 text-danger">
+                </i>
+                <h5 class="d-inline">Site URL must be a valid one</h5>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/Bookmarker.js"></script>
+  </body>
+</html>
