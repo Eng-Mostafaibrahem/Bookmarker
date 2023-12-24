@@ -9,7 +9,7 @@ if (localStorage.getItem("siteList") == null) {
 } else {
   siteList = JSON.parse(localStorage.getItem("siteList"));
   display(siteList);
-  //console.log(  localStorage.getItem("siteList",JSON.parse(siteList)))
+
 }
 
 function addSite() {
